@@ -1,0 +1,63 @@
+{
+  "name": "adonis5-mongoose",
+  "version": "1.0.0",
+  "description": "Adonis5 Mongoose Provider",
+  "main": "index.js",
+  "author": "decoder.id",
+  "license": "MIT",
+  "scripts": {
+    "mrm": "mrm --preset=@adonisjs/mrm-preset",
+    "pretest": "npm run lint",
+    "test": "node -r @adonisjs/require-ts/build/register bin/test.ts",
+    "clean": "del-cli build",
+    "compile": "npm run lint && npm run clean && tsc",
+    "build": "npm run compile",
+    "lint": "eslint . --ext=.ts --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decoderid/adonis5-mongoose.git"
+  },
+  "keywords": [
+    "AdonisJS",
+    "AdonisJS5",
+    "AdonisJS 5",
+    "mongoose",
+    "mongodb"
+  ],
+  "dependencies": {
+    "mongoose": "^6.7.3"
+  },
+  "peerDependencies": {
+    "@adonisjs/core": "^5.1.0"
+  },
+  "devDependencies": {
+    "@adonisjs/core": "^5.1.0",
+    "@adonisjs/mrm-preset": "^5.0.3",
+    "@adonisjs/require-ts": "^2.0.13",
+    "@types/node": "^18.11.9",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-adonis": "^2.1.1",
+    "mrm": "^4.1.13",
+    "typescript": "^4.9.3"
+  },
+  "mrmConfig": {
+    "core": false,
+    "license": "MIT",
+    "services": [],
+    "minNodeVersion": "16.13.1",
+    "probotApps": []
+  },
+  "files": [
+    "build/adonis-typings",
+    "build/providers"
+  ],
+  "adonisjs": {
+    "types": "adonis5-mongoose",
+    "providers": [
+      "adonis5-mongoose"
+    ]
+  }
+}
