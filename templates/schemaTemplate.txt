@@ -1,0 +1,19 @@
+import { Schema, model } from '@ioc:Adonis/Addons/Mongoose'
+import { {{ filename }} } from './{{filename}}.d.ts'
+
+const schema = new Schema<{{ filename }}>(
+  {
+    name: {
+      type: String,
+      required: true
+    }
+  },
+  {
+    timestamps: {
+      createdAt: 'created_at',
+      updatedAt: 'updated_at'
+    }
+  }
+)
+
+export default model<{{ filename }}>('{{ filename }}', schema)

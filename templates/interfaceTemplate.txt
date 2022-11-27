@@ -1,0 +1,5 @@
+import { Document } from '@ioc:Adonis/Addons/Mongoose'
+
+export interface AuthInterface extends Document {
+  name: String
+}

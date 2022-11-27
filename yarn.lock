@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@adonisjs/ace@^11.3.1":
+"@adonisjs/ace@^11.0.2", "@adonisjs/ace@^11.3.1":
   version "11.3.1"
   resolved "https://registry.yarnpkg.com/@adonisjs/ace/-/ace-11.3.1.tgz#6e551d8744583f71f0202587f64a6e7ee7ce7f25"
   integrity sha512-Ho3+Lk/16OSjX3CfhxsoLUTlcVG4sDlXUwHx+Zry/RLft5M6plT5ln0WkZvL7tqtb1uCZgP5YiMrMtDjSRzZLA==
@@ -52,7 +52,7 @@
   dependencies:
     "@poppinss/utils" "^5.0.0"
 
-"@adonisjs/core@^5.1.0":
+"@adonisjs/core@^5.1.8":
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/@adonisjs/core/-/core-5.9.0.tgz#cd5a1ea938a920ff82d9644386c9d53b70b027b8"
   integrity sha512-32zG9EW0t0Ck0cMzlwD0+z3GJG7k/gZz6P0+h+s8N1N7fHxGixrKs7W7lT3OcIvk0NsuIw1tUPAU7fAWytHEqA==
