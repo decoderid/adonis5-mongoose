@@ -1,6 +1,6 @@
 {
   "name": "adonis5-mongoose",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adonis5 Mongoose Provider",
   "main": "build/providers/MongooseProvider.js",
   "author": "it@decoder.id",

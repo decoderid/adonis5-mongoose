@@ -22,7 +22,7 @@ export default class MakeTask extends BaseCommand {
     this.logger.info(isInterface ? 'Generate Interface' : 'Generate Schema')
 
     const file = isInterface ? '/templates/interfaceTemplate.txt' : '/templates/schemaTemplate.txt'
-    const templatePath = path.resolve(this.application.appRoot + '/node_modules/adonis5-mongoose' + file)
+    const templatePath = path.resolve(this.application.appRoot + '/node_modules/adonis5-mongoose/build' + file)
 
     const destDir = isInterface ? 'app/Schema/interfaces' : 'app/Schema'
 
