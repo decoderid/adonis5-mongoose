@@ -1,3 +1,5 @@
 declare module '@ioc:Adonis/Addons/Mongoose' {
-  export * from 'mongoose'
+  import * as Mongoose from 'mongoose'
+  export default Mongoose
 }
+

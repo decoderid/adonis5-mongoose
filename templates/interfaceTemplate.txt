@@ -1,5 +1,5 @@
 import { Document } from '@ioc:Adonis/Addons/Mongoose'
 
-export interface AuthInterface extends Document {
+export interface Interface{{ filename }} extends Document {
   name: String
 }

@@ -1,6 +1,5 @@
 import { ApplicationContract } from '@ioc:Adonis/Core/Application'
-import { Mongoose } from 'mongoose'
-import Env from '@ioc:Adonis/Core/Env'
+import * as mongoose from 'mongoose'
 
 export default class MongooseProvider {
   public static needsApplication = true
@@ -8,11 +7,16 @@ export default class MongooseProvider {
   constructor (protected app: ApplicationContract) {}
 
   public register () {
-    const mongoose = new Mongoose()
+    const Logger = this.app.container.use('Adonis/Core/Logger')
+    const env = this.app.container.use('Adonis/Core/Env')
 
-    mongoose.connect(Env.get('MONGO_URI', 'mongodb://localhost/test'))
+    mongoose.connect(env.get('MONGODB_URI')).then(() => {
+      Logger.info('DB Connection: OK')
+    }).catch(err => {
+      Logger.error(err, 'DB Error')
+    })
 
-    this.app.container.singleton('Mongoose', () => mongoose)
+    this.app.container.singleton('Adonis/Addons/Mongoose', () => mongoose)
   }
 
   public async boot () {
@@ -24,6 +28,6 @@ export default class MongooseProvider {
   }
 
   public async shutdown () {
-    await this.app.container.use('Mongoose').disconnect()
+    await this.app.container.use('Adonis/Addons/Mongoose').disconnect()
   }
 }

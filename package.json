@@ -2,8 +2,8 @@
   "name": "adonis5-mongoose",
   "version": "1.0.0",
   "description": "Adonis5 Mongoose Provider",
-  "main": "index.js",
-  "author": "decoder.id",
+  "main": "build/providers/MongooseProvider.js",
+  "author": "it@decoder.id",
   "license": "MIT",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
@@ -56,7 +56,8 @@
     "build/adonis-typings",
     "build/commands",
     "build/providers",
-    "build/templates"
+    "build/templates",
+    "build/src"
   ],
   "adonisjs": {
     "commands": [

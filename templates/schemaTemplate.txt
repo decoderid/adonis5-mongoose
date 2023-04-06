@@ -1,7 +1,7 @@
 import { Schema, model } from '@ioc:Adonis/Addons/Mongoose'
-import { {{ filename }} } from './{{filename}}.d.ts'
+import { Interface{{ filename }} } from './interfaces/{{filename}}'
 
-const schema = new Schema<{{ filename }}>(
+const schema = new Schema<Interface{{ filename }}>(
   {
     name: {
       type: String,
@@ -16,4 +16,4 @@ const schema = new Schema<{{ filename }}>(
   }
 )
 
-export default model<{{ filename }}>('{{ filename }}', schema)
+export default model<Interface{{ filename }}>('{{ filename }}', schema)
